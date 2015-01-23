@@ -1,0 +1,31 @@
+import android.test.ActivityInstrumentationTestCase2;
+
+public class SampleTests extends ActivityInstrumentationTestCase2<CameraActivity> {
+
+    private CameraActivity mTestActivity;
+    private Camera2BasicFragment mTestFragment;
+
+    public SampleTests() {
+        super(CameraActivity.class);
+    }
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+
+
+        // All other fields are null or empty.
+        mTestActivity = getActivity();
+        mTestFragment = (Camera2BasicFragment);
+            
+    }
+
+   
+    public void testPreconditions() {
+    
+        assertNotNull("mTestActivity is null", mTestActivity);
+        assertNotNull("mTestFragment is null", mTestFragment);
+    }
+
+
+}
