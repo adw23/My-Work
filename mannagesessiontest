@@ -1,0 +1,39 @@
+package uk.ac.aber.group1.rpsrrec.uk.ac.aber.group1.rpsrrec.tests;
+
+import android.test.ActivityInstrumentationTestCase2;
+import android.widget.ListView;
+
+import junit.framework.TestCase;
+
+import uk.ac.aber.group1.rpsrrec.ManageSession;
+import uk.ac.aber.group1.rpsrrec.R;
+
+public class ManageSessionTest extends ActivityInstrumentationTestCase2<ManageSession>{
+
+    private ManageSession tManSession;
+    private ListView tListView;
+
+    public ManageSessionTest(){
+        super(ManageSession.class);
+    }
+
+    @Override
+    public void setUp() throws Exception {
+        super.setUp();
+        tManSession = getActivity();
+        tListView = (ListView) tManSession.findViewById(R.id.recordList);
+        getInstrumentation().runOnMainSync(new Runnable() {
+            @Override
+            public void run() {
+            //    tListView.performItemClick(tListView.getAdapter().getView() )
+            }
+        });
+    }
+
+    public void testPreconditions(){
+        assertNotNull("tManSession is null", tManSession);
+        assertNotNull("tListView is null", tListView);
+
+
+    }
+}
