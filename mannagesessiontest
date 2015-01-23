@@ -21,13 +21,14 @@ public class ManageSessionTest extends ActivityInstrumentationTestCase2<ManageSe
     public void setUp() throws Exception {
         super.setUp();
         tManSession = getActivity();
-        tListView = (ListView) tManSession.findViewById(R.id.recordList);
+       final tListView = (ListView) tManSession.findViewById(R.id.recordList);
         getInstrumentation().runOnMainSync(new Runnable() {
             @Override
             public void run() {
-            //    tListView.performItemClick(tListView.getAdapter().getView() )
+              tListView.performItemClick(tListView.getAdapter().getView(position, null null), position, tListView.getAdapter().getItemId(postion)
             }
         });
+        getInstrumentation().waitForIdleSync();
     }
 
     public void testPreconditions(){
