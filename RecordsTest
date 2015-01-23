@@ -1,0 +1,9 @@
+//import pakage
+
+public class RecordsTest(){
+  private Record tRecord;
+  if (Record != Null){
+  //print("FAIL");
+    //fail
+  }
+  //add the code that confirms theat the other sections are not null and add it to this.
