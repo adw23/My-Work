@@ -3,7 +3,7 @@ import android.test.ActivityInstrumentationTestCase2;
 public class SampleTests extends ActivityInstrumentationTestCase2<CameraActivity> {
 
     private CameraActivity mTestActivity;
-    private Camera2BasicFragment mTestFragment;
+    
 
     public SampleTests() {
         super(CameraActivity.class);
