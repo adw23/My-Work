@@ -1,0 +1,30 @@
+pakage uk.ac.aber.group1.rpsrrec.uk.aber.group1.rpsrrc.tests;
+
+import android.test.ActivityInstrumentTestCase2;
+import junit.framework.TestCase;
+
+import uk.ac.aber.group1.rpsrrc.SessionSelect;
+
+public class SessionSelectTest extends ActivityInstrumentationTestCase2<SessionSelect>{
+
+  private SessionSelect tSessionSelect;
+  private Menu tItem
+  public SessionSelectTest(){
+    super(SessionSelect.class);
+  }
+  public void testSessPreconditions(){
+  assertNotNull("tSessionSelect is null", tSessionSelect);
+  }
+  
+  @Override
+  public void setUp() throws Exception {
+    super.setUp();
+    tSessionSelect = getActivity();
+    tItem = (Menu) tSessionSelect.findItemById(R.id.action_settings);
+    getInstrumentation().runOnMainSync(new Runnable() {
+    @Override
+    public void run() {
+    tItem.performItemClick(tItem.getAdapter().getView(postion, null, null), postion, tItem.getAdapter().getItemId(postion)
+    }
+  });
+)
